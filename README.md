@@ -15,15 +15,17 @@ However, the goal is less to fill out all of the combinations and moreso just ma
 ```
 - main
 | - debian
+| - | - debian-system
+| - | - debian-wsl
+| - | - debian-docker
 | - | - ubuntu
 | - | - | - ubuntu-system
 | - | - | - ubuntu-wsl 
 | - | - | - ubuntu-docker 
-| - | - arch
-| - | - | - arch-system
-| - | - | - arch-wsl
-| - | - | - arch-docker
-| - | - ...
+| - arch
+| - | - arch-system
+| - | - arch-wsl
+| - | - arch-docker
 | - red-hat
 | - | - ...
 ```
@@ -32,5 +34,5 @@ The branches ideally should be used where each change is done at the most genera
 
 However, that is much easier said than done, so many times it will be that more specific branches may receive changes, and then as other sibling branches get the same changes portions can be cherrypicked.
 
-Ultimately this process is still a work in progress and is decently likely to change with time.
+What this would look like in progress is changes may be committed to ubuntu-system, but then if a branch ubuntu-wsl is made then that warrants running a git diff and seeing what can be brought back into the ubuntu parent branch.
 
